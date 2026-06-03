@@ -54,6 +54,9 @@ docker compose up -d
 Frontend:
 http://localhost:3000
 
+Mobile:
+http://192.168.1.110:3000
+
 Backend:
 http://localhost:5000
 
