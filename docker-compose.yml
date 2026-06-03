@@ -1,0 +1,31 @@
+services:
+
+  mongo:
+    image: mongo:6
+    container_name: crm-mongo
+    ports:
+      - "27017:27017"
+
+  backend:
+    build:
+      context: ./backend
+
+    container_name: crm-backend
+
+    ports:
+      - "5000:5000"
+
+    depends_on:
+      - mongo
+
+  frontend:
+    build:
+      context: ./frontend
+
+    container_name: crm-frontend
+
+    ports:
+      - "3000:3000"
+
+    depends_on:
+      - backend
