@@ -111,6 +111,18 @@ Updated image pull configuration and validated image availability.
 * GitHub Actions CI/CD
 * Application troubleshooting
 
+
+## Architecture
+![Architecture](docs/architecture.png)
+## Application
+![Application](docs/app-running.png)
+## Docker Containers
+![Docker](docs/docker-ps.png)
+## Kubernetes Deployment
+![Kubernetes](docs/kubectl-get-all.png)
+## Helm Deployment
+![Helm](docs/helm-list.png)
+
 ---
 
 ## Author
