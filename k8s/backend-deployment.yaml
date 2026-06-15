@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: crm-backend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: crm-backend
+  template:
+    metadata:
+      labels:
+        app: crm-backend
+    spec:
+      containers:
+      - name: backend
+        image: resources-backend:latest
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 5000
+        env:
+        - name: MONGO_URL
+          value: mongodb://crm-mongo-service:27017
