@@ -114,5 +114,5 @@ Updated image pull configuration and validated image availability.
 ---
 
 ## Author
-
 Anil Ediga
+
