@@ -16,19 +16,25 @@ The solution was containerized using Docker, orchestrated using Docker Compose, 
 
 ## Architecture
 
-Frontend (React)
-↓
-Backend API (Node.js)
-↓
-MongoDB
-
-CI/CD Pipeline:
-GitHub → GitHub Actions → Docker Build
-
-Deployment Options:
-Docker Compose
-Kubernetes Deployments & Services
-Helm Chart
+                 +-------------------+
+                 |   GitHub Repo     |
+                 +---------+---------+
+                           |
+                    GitHub Actions
+                           |
+                    Build Docker Images
+                           |
+      +--------------------+--------------------+
+      |                                         |
+Docker Compose                          Kubernetes + Helm
+      |                                         |
+      +--------------------+--------------------+
+                           |
+                    React Frontend
+                           |
+                    Node.js Backend
+                           |
+                       MongoDB
 
 ---
 
